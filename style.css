@@ -1,0 +1,268 @@
+:root{
+    --primary: blue;
+    --dark:#0d5c75;
+    --blue:#199fb1;
+    --light-blue:#a5d1e1;
+    --white:#fff;
+    --black:#000;
+}
+
+
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-color: var(--black);
+    color: var(--light-blue);
+    line-height: 1.5;
+}
+
+
+#main-header{
+    background-color: var(--light-blue);
+    color: var(--primary);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 1.5rem ;
+}
+
+
+.navbar{
+    background-color: var(--primary);
+    padding: 1rem;
+}
+.navbar li{
+    list-style: none;
+}
+.navbar ul{
+    display: flex;
+    justify-content: space-around;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: var(--white);
+}
+.navbar ul li a:hover{
+    color: var(--dark);
+    border-bottom: var(--black) 1px solid;
+}
+.navbar ul li a:active{
+    color: var(--primary);
+}
+
+
+#showcase{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: var(--white);
+    color: var(--primary);
+    padding: 2.4rem;
+}
+#showcase .showcase-area{
+    padding: 2.2rem;
+    line-height: 1.4;
+}
+#showcase .showcase-area p{
+    text-align: left;
+}
+#showcase .showcase-area input{
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+    padding: 0.4rem;
+    border: none;
+}
+#showcase .showcase-area .links{
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    text-align: start;
+}
+#showcase .showcase-area .links a{
+    color: var(--blue);
+    margin-top: 1.1rem;
+    padding-right: 1.3rem;
+}
+#showcase .showcase-area .links a:hover{
+    color: var(--dark);
+}
+
+
+#main{
+    background-color: var(--primary);
+    color: var(--white);    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 2.2rem;
+}
+#main .time{
+    background-color: #000;
+    color: var(--light-blue);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem auto;
+    padding: 1.rem;
+}
+#main .time p{
+    text-align: center;
+    transform: translate(-50%, 50%);
+}
+#main ul, #main p{
+    text-align: start;
+    margin-bottom: 1.1rem;    
+}
+#main input{
+    background-color: var(--white);
+    color: var(--primary);
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 1.5rem;
+    padding: 0.4rem;
+    border: none;
+}
+
+
+#main-footer{
+    background-color: var(--light-blue);
+    color: var(--black);
+    text-align: center;
+    padding: 1.1rem;
+}
+
+
+
+
+/* utility */
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+highlight{
+    color: var(--black);
+}
+bold{
+    font-weight: bold;
+    border-bottom: var(--blue) 2px solid;
+}
+.text-xl{
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+
+
+@media (max-width: 1000px) {
+    #showcase{
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: auto; 
+    }
+    #showcase .showcase-area .links{
+        width: 100%;
+    }
+    #showcase .showcase-area .links a{
+        text-align: center;
+        margin: auto;
+        padding-top: 1rem;
+    }
+    .text-xl {
+        font-size: 2.5rem;
+    }
+  }
+  
+
+
+@media (max-width: 670px) {
+    #showcase{
+        display: block;  
+    }
+    #showcase .showcase-area h2{
+        text-align: center;
+        margin-bottom: 0.6rem;
+    }
+    p{
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+  }
+
+  
+
+  @media (max-width: 600px) {
+    #showcase .showcase-area h2{
+        text-align: center;
+        margin-bottom: 0.6rem;
+    }
+    #showcase .showcase-image{
+        display: block;
+        text-align: center;
+    }
+    img{
+        width: 400px;
+        justify-content: center;
+    }
+    p{
+        line-height: 1.3;
+    }
+  }
+
+
+
+@media (max-width: 500px) {
+    #showcase{
+        display: block;
+        text-align: left;
+    }
+    #showcase .showcase-area h2{
+        text-align: center;
+        margin-bottom: 0.6rem;
+    }
+    #showcase .showcase-image{
+        display: block;
+        text-align: center;
+    }
+    #showcase .showcase-area input{
+        display: block;
+        margin: 1rem auto;
+    }
+    img{
+        width: 200px;
+        justify-content: center;
+    }
+    p{
+        line-height: 1.3;
+    }
+    .text-xl {
+      font-size: 1.5rem;
+    }
+    #main .time{
+        background-color: var(--primary);
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .container{
+        width: 90%;
+        margin: auto;
+    }
+    #main .time{
+        background-color: var(--primary);
+    }
+  }
